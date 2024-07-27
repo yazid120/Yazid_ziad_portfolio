@@ -1,0 +1,42 @@
+{
+  "name": "yazid-ziad-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 3000",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "proxy": "http://127.0.0.1:3000",
+  "dependencies": {
+    "@heroicons/react": "^2.0.18",
+    "@material-tailwind/react": "^2.1.0",
+    "@react-pdf/renderer": "^3.1.12",
+    "axios": "^1.4.0",
+    "flowbite": "^1.8.1",
+    "flowbite-react": "^0.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
+    "react-pdf": "^7.3.3",
+    "react-router-dom": "^6.15.0",
+    "react-scroll": "^1.8.9"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "gh-pages": "^6.1.1",
+    "sass": "^1.65.1",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5"
+  }
+}

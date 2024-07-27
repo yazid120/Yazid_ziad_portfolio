@@ -1,0 +1,42 @@
+{
+   "Leancubator":{ 
+    "title":"Full Stack Developer intern at Leancubator", 
+    "location":"Alger, Cheraga",
+    "date":"september, 2022 - february, 2023 (6 months)",
+    "image_company":"leancubator.jpg",
+    "work_experience01":"PHP Backend & MYSQL databases development",
+    "work_experience02":"Developing a responsive websites based on client requirements.",
+    "work_experience03":"Deal with bugs and understanding web websockets",
+    "work_experience04":"Relational databases conception and management (MYSQL)"
+   },
+   "Sarl Azimut":{
+   "title":"internship backend PHP/LARAVEL",
+   "location":"Alger, Dely Brahim", 
+   "date":"july, 2021 - september, 2021 (3 months)",
+   "image_company":"dafualt_comp.svg",
+   "work_experience01":"Create a full stack website in laravel/php",
+   "work_experience02":"getting into advance concept of the Framework",
+   "work_experience03":"REST and json api integration"
+   },
+   "Flambosoft":{
+    "title":"Ruby on rails Full Stack Developer", 
+    "location":"CyberPark Sidi Abdellah, El Rahmania, Alger",
+    "date":"august, 2023 - september,  2023 (2 months)",
+    "image_company":"flambosoft.png",
+    "work_experience01":"Full stack web development with Ruby on Rails, HTML5, CSS3, SASS, HAML, jQuery, Coffeescript…",
+    "work_experience02":"Design and develop new engagement concepts",
+    "work_experience03":"Imagine elegant and creative answers to complex problems",
+    "work_experience04":"Work in an agile environment in which rapid iterations and the culture of feedback take precedence",
+    "work_experience05":"Continually look for new ways to improve the platform and processes."
+   },
+   "Rhinotenders":{
+    "title":"end-of-studies internship", 
+    "location":"Ouled Fayet, Chéraga - Alger, Algérie.",
+    "date":"October, 2023 - April, 2024 · (7 months)",
+    "image_company":"Rhinotenders_logo.jpeg",
+    "work_experience01":"Implement a management application for the rhinotenders platform",
+    "work_experience02":"Build the full application in codeigniter 4 - php framework with the mvc architecture",
+    "work_experience03":"Using relational databases like mysql",
+    "work_experience04":"Work in an agile environment in which rapid iterations and the culture of feedback take precedence"
+   }
+}

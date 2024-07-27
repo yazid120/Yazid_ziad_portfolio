@@ -1,0 +1,4 @@
+
+app={
+    title : 'yazid Portfolio'
+}
