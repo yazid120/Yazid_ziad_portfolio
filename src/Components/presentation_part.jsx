@@ -1,5 +1,5 @@
 import React from "react";
-import Person from "../assets/images/kirua.jfif"
+import Person from "../../public/assets/images/kirua.jfif"
 import { Link } from "react-scroll"
 
 const PresentationSection = function(){

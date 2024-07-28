@@ -1,4 +1,5 @@
 import React from 'react';
+import config from "../../config";
 
 function WorkExperience({ workData }) {
     const style_expos={
@@ -13,7 +14,7 @@ function WorkExperience({ workData }) {
       {Object.keys(workData).map((company, index) => (
         <div key={index} className="mb-6" style={style_expos}>
           <img
-            src={'/src/assets/images/'+workData[company].image_company}
+            src={`${config.baseUrl}/assets/images/${workData[company].image_company}`}
             alt={company}
             className="w-24 h-24 rounded-full object-cover"
           />

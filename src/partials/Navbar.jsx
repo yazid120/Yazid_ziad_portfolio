@@ -1,7 +1,7 @@
 import React from "react"
 import DownloadResume from "../Components/Ressource/DownloadPdfResume"
 import { PDFViewer } from "@react-pdf/renderer"
-import pdfDocument  from "../assets/pdf/Ziad_MouhamedYazid_CV.pdf"
+import pdfDocument  from "../../public/assets/pdf/Ziad_MouhamedYazid_CV.pdf"
 import {
     Navbar,
     Typography,
