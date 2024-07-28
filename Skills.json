@@ -1,0 +1,56 @@
+{
+    "languages":{
+        "javascript":{
+          "title":"javascript", 
+          "image":"javascript-1.svg"
+        },
+        "PHP":{
+          "title":"php", 
+          "image":"php-1.svg"
+        },
+        "python":{
+          "title":"python", 
+          "image":"python-5.svg"
+        },
+        "ruby":{
+          "title":"ruby", 
+          "image":"ruby.svg"
+        }
+    },
+    "Frameworks":{
+      "Laravel":{
+        "title":"Laravel", 
+        "image":"laravel-2.svg"
+      }, 
+      "React js":{
+        "title":"React", 
+        "image":"react-2.svg"
+      },
+      "Rails":{
+        "title":"rails", 
+        "image":"rails-1.svg"
+      }, 
+      "jquery":{
+        "title":"jquery",
+        "image":"jquery-3.svg"
+      }
+    },
+    "Tools & styling":{
+        "HTML5":{
+          "title":"HTML",
+          "image":"html5-2.svg"
+        },
+        "CSS3":{
+          "title":"CSS",
+          "image":"css-4.svg"
+        },
+        "Tailwindcss":{
+          "title":"Tailwind CSS",
+          "image":"tailwind-css-2.svg"
+        }, 
+        "Bootstrap":{
+          "title":"Bootstrap",
+          "image":"bootstrap-4.svg"
+        }
+    }
+}
