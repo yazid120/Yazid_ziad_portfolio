@@ -2,12 +2,13 @@ import React from "react";
 import { useState,useEffect } from "react";
 import axios from "axios";
 import WorkSkills from "./Ressource/WorkSkills";
+import config from "../config";
 
 const Skills = function(){
     const [Skills_state, SetSkills] = useState([]); 
 
     async function getSkills_Api(){
-    const link_api = '/Skills.json';
+    const link_api = `${config.baseUrl}/Skills.json`;
     try{
     await axios.get(link_api).then((response)=>{
         SetSkills(response.data);

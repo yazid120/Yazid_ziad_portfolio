@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import WorkExperience from "./Ressource/WorkExperience";
+import config from "../config"
  
 
 const Experience = function(){
     const [workData, SetjsonData] = useState([]); 
     
   async function get_Experience_api(){
-    let link_api = '/experience.json'
+    const link_api = `${config.baseUrl}/experience.json`;
     try{
       const response = await axios.get(link_api); 
         SetjsonData(response.data);
