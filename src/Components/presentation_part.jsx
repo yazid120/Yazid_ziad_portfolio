@@ -19,57 +19,77 @@ const PresentationSection = function(){
      </div>
 
      <div className="m-3 flex justify-center">
-        <ul className="flex justify-center gap-16 w-1/2 p-4">
+        <ul className="flex flex-col sm:flex-row justify-center gap-4 sm:justify-cente sm:gap-16 w-full sm:w-1/2 p-4">
 
-            <li className="text-white text-3xl cursor-pointer">
-            <Link activeClass="active" to="section-home"
-               spy={true} smooth={true} 
-               offset={-70}
-               duration={800}
-               className="font-semibold">
-                    {Links_list[0].link_name}
-            </Link>
-            </li>
-            
-            <li className="text-white text-3xl cursor-pointer">
-            <Link activeClass="active" to="section-experience"
-               spy={true} smooth={true}
-               offset={-70}
-               duration={800}
-               className="font-semibold">
-                    {Links_list[1].link_name}
-            </Link>
-            </li>
-            
-            <li className="text-white text-3xl cursor-pointer">
-            <Link activeClass="active" to="section-2"
-                spy={true} smooth={true}
-                offset={-70}
-                duration={800}
-                className="font-semibold">
-                    {Links_list[2].link_name}
-            </Link>
-            </li>
+        <li className="text-white text-xl sm:text-3xl cursor-pointer">
+        <Link
+            activeClass="active"
+            to="section-home"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={800}
+            className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
+        >
+            {Links_list[0].link_name}
+        </Link>
+    </li>
 
-            <li className="text-white text-3xl cursor-pointer">
-            <Link activeClass="active" to="section-2"
-                spy={true} smooth={true}
-                offset={-70}
-                duration={800}
-                className="font-semibold">
-                    {Links_list[3].link_name}
-            </Link>
-            </li>
+    <li className="text-white text-xl sm:text-3xl cursor-pointer">
+        <Link
+            activeClass="active"
+            to="section-experience"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={800}
+            className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
+        >
+            {Links_list[1].link_name}
+        </Link>
+    </li>
 
-            <li className="text-white text-3xl cursor-pointer">
-            <Link activeClass="active" to="section-contact"
-                spy={true} smooth={true}
-                offset={-70}
-                duration={800}
-                className="font-semibold">
-                    {Links_list[4].link_name}
-            </Link>
-            </li>
+    <li className="text-white text-xl sm:text-3xl cursor-pointer">
+        <Link
+            activeClass="active"
+            to="section-2"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={800}
+            className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
+        >
+            {Links_list[2].link_name}
+        </Link>
+    </li>
+
+    <li className="text-white text-xl sm:text-3xl cursor-pointer">
+        <Link
+            activeClass="active"
+            to="section-2"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={800}
+            className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
+        >
+            {Links_list[3].link_name}
+        </Link>
+    </li>
+
+    <li className="text-white text-xl sm:text-3xl cursor-pointer">
+        <Link
+            activeClass="active"
+            to="section-contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={800}
+            className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
+        >
+            {Links_list[4].link_name}
+        </Link>
+    </li>
         </ul>
      </div>
     </section>

@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import pdfDocument from "../../../public/assets/pdf/Ziad_MouhamedYazid_CV.pdf";
 
-function DownloadResume(pdfDocument){
-    return(
+function DownloadResume() {
+    return (
         <>
-        <a href={pdfDocument} 
-        download="Ziad_MouhamedYazid_CV.pdf"
-        target="_blank"
-        rel="noreferrer">
-            <button>
-            Download Resume
-            </button>
-        </a>
+            <a href={pdfDocument} 
+               download="Ziad_MouhamedYazid_CV.pdf"
+               target="_blank"
+               rel="noreferrer">
+                <button>
+                    Download Resume
+                </button>
+            </a>
         </>
-    )
+    );
 }
-export default DownloadResume; 
+
+export default DownloadResume;

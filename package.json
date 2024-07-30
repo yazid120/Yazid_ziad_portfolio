@@ -13,8 +13,11 @@
   },
   "proxy": "http://127.0.0.1:3000",
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
     "@heroicons/react": "^2.0.18",
     "@material-tailwind/react": "^2.1.0",
+    "@mui/material": "^5.16.5",
     "@react-pdf/renderer": "^3.1.12",
     "axios": "^1.4.0",
     "flowbite": "^1.8.1",

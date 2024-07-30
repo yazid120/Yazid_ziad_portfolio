@@ -123,3 +123,12 @@ button:focus-visible {
   width: 100%;
 background-color: #042c44;
 }
+
+.link-hover-animation {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.link-hover-animation:hover {
+  color: #3b82f6; /* Tailwind's blue-500 */
+  transform: scale(1.05);
+}

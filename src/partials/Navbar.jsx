@@ -30,10 +30,10 @@ let Navigationbar = function(){
 
           <div className="flex gap-4" >
           <a href="https://github.com/yazid120">
-          <FaGithubAlt className="cursor-pointer text-3xl"/>
+            <FaGithubAlt className="cursor-pointer text-3xl"/>
           </a>
           <a href="https://www.linkedin.com/in/ziad-mouhamed-yazid-802057218/">
-          <RiLinkedinFill className="cursor-pointer text-3xl"/>
+            <RiLinkedinFill className="cursor-pointer text-3xl"/>
           </a>
           </div>
           

@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react"; 
 import axios from "axios";
+import experieceSvg from "../../public/assets/images/Innovation-amico.svg"
 
 
 const Contact = function(){
@@ -21,6 +22,9 @@ const Contact = function(){
 
     return(
         <>
+    <div className="flex justify-center gap-4 ">
+        <img src={experieceSvg} className="w-3/4 sm:w-1/3 lg:w-1/4 object-cover rounded-md shadow-lg" alt="Experience" />
+    </div>
     <section className="bg-white dark:bg-gray-900" id="section-contact">
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
           <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
