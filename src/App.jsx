@@ -3,6 +3,7 @@ import Navigationbar from './partials/Navbar';
 import Footer from './partials/footer';
 import Dark_Light_mode from './Components/Light_dark_mode';
 import LoadingSpinner from './Components/LoadingSpinner';
+import Certification from './Components/Certification';
 
 // Lazily import components
 const PresentationSection = React.lazy(() => import('./Components/presentation_part'));
@@ -37,6 +38,8 @@ function App() {
         <Stars />
 
         <Experience />
+
+        <Certification/>
 
         <Skills />
 

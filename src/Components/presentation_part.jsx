@@ -7,7 +7,7 @@ const PresentationSection = function(){
         {'link_name':"Home"},
         {"link_name":"Experience"},
         {"link_name":"Skills"},
-        {"link_name":"Socials"},
+        {"link_name":"Certification"},
         {"link_name":"Contact"},
     ]
     return( 

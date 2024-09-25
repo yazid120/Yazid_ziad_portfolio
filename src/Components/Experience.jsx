@@ -22,7 +22,7 @@ const Experience = function(){
     get_Experience_api();
   }, []);
 
-
+  console.log(workData)
     return( 
     <>
    <section className="flex justify-center items-center" id="section-experience">
