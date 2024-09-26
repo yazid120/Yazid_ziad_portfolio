@@ -9,7 +9,6 @@ function WorkExperience({ workData }) {
     }
   return (
     <div className="container mx-auto p-4 max-h-screen overflow-auto">
-      <h1 className="text-2xl font-bold mb-4">Work Experience</h1>
       <p>Some of work experience on my site</p>
       {Object.keys(workData).map((company, index) => (
         <div key={index} className="mb-6" style={style_expos}>

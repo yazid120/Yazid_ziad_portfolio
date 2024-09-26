@@ -25,15 +25,17 @@ const Certification = function(){
     },[])
 
 
-    console.log(CertificationData)
 
     return(
-        <>
-        <div>
-        <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-            Certification</h1>
+        <> 
+        <h1 className="mb-4 mt-12 text-4xl tracking-tight font-extrabold text-center text-gray-900 
+        dark:text-white"> Certification</h1>
+        <section className="flex justify-center items-center" id="section-certification">
+            <div className="bg-gray-100 opacity-90 w-9/12 min-h-screen-auto rounded-md	overflow-auto">
+               
             <WorkCertification CertificationData={CertificationData}/>
-        </div>
+            </div>
+        </section>
         </>
     )
 }
