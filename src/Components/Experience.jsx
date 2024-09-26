@@ -22,11 +22,13 @@ const Experience = function(){
     get_Experience_api();
   }, []);
 
-  console.log(workData)
+
     return( 
     <>
+    <h1 className="mb-4 mt-6 text-4xl tracking-tight font-extrabold text-center text-gray-900 
+        dark:text-white"> Work Experiences </h1>
    <section className="flex justify-center items-center" id="section-experience">
-    <div className="bg-gray-100 w-10/12 min-h-screen rounded-md	overflow-auto">
+    <div className="bg-gray-100  w-9/12 min-h-screen rounded-md	overflow-auto">
       <WorkExperience workData={workData} />
     </div>
   </section>

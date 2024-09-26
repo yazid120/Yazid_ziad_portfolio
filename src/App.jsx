@@ -44,6 +44,8 @@ function App() {
         <Skills />
 
         <Contact />
+
+        <Footer/>
       </Suspense>
 
   {/*** Footer component ***/}

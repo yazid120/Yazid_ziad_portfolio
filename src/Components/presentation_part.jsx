@@ -6,8 +6,8 @@ const PresentationSection = function(){
     const Links_list = [
         {'link_name':"Home"},
         {"link_name":"Experience"},
-        {"link_name":"Skills"},
         {"link_name":"Certification"},
+        {"link_name":"Skills"},
         {"link_name":"Contact"},
     ]
     return( 
@@ -66,7 +66,7 @@ const PresentationSection = function(){
     <li className="text-white text-xl sm:text-3xl cursor-pointer">
         <Link
             activeClass="active"
-            to="section-2"
+            to="section-certification"
             spy={true}
             smooth={true}
             offset={-70}
