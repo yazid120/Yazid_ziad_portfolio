@@ -19,7 +19,7 @@ const PresentationSection = function(){
      </div>
 
      <div className="m-3 flex justify-center">
-        <ul className="flex flex-col sm:flex-row justify-center gap-4 sm:justify-cente sm:gap-16 w-full sm:w-1/2 p-4">
+     <ul className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-16 w-full sm:w-1/2 p-4">
 
         <li className="text-white text-xl sm:text-3xl cursor-pointer">
         <Link
@@ -52,7 +52,7 @@ const PresentationSection = function(){
     <li className="text-white text-xl sm:text-3xl cursor-pointer">
         <Link
             activeClass="active"
-            to="section-2"
+            to="section-certification"
             spy={true}
             smooth={true}
             offset={-70}
@@ -66,7 +66,7 @@ const PresentationSection = function(){
     <li className="text-white text-xl sm:text-3xl cursor-pointer">
         <Link
             activeClass="active"
-            to="section-certification"
+            to="section-2"
             spy={true}
             smooth={true}
             offset={-70}
