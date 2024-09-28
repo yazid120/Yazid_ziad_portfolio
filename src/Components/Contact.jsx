@@ -17,7 +17,13 @@ const Contact = function(){
         subject:subject, 
         message:message
        }
-       console.log(contactData);
+
+       try{
+            const response = await axios.post('http://127.0.0.1:5000/api/contact', contactData);
+            console.log(response.data)
+       }catch(e){
+            console.error('excepted error: ', e)
+       }
     }
 
     return(
