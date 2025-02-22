@@ -19,7 +19,11 @@ const Contact = function(){
        }
 
        try{
-            const response = await axios.post('http://127.0.0.1:5000/api/contact', contactData);
+        const response = await axios.post('http://127.0.0.1:5000/api/contact', contactData, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
             console.log(response.data)
        }catch(e){
             console.error('excepted error: ', e)
