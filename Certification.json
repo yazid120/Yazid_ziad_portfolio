@@ -1,0 +1,16 @@
+{
+    "HackerRank":{
+        "certifiedBy":"HackerRank", 
+        "title":"Python (Basic)",
+        "image":"hackerrank_logo.jpg",
+        "Skills":["Python3",  "Data Structures and Algorithms (DSA)", "Problem Solving"],
+        "topic":"It covers topics like Scalar Types, Operators and Control Flow, Strings, Collections and Iteration, Modular"
+    },
+    "freeCodeCamp":{
+        "certifiedBy":"freeCodeCamp", 
+        "title":"Front End Development Libraries",
+        "image":"free_code_camp_logo.jpg",
+        "Skills":["Javascript" , "Jquey" , "HTML" ,"css" , "sass" ,"React.js" , "Redux"],
+        "topic":"The freeCodeCamp (FCC) Front End Development Librariescertification covers several topics that are essential for building modernfront-end web applications. The certificate focuses on widely-used libraries,tools, and frameworks that make front-end development more efficient andstructured."
+    }
+}
