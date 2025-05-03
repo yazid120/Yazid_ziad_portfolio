@@ -24,10 +24,11 @@ const Skills = function(){
     return( 
     <>
     <section className="Skills_wrapp_container mt-2 mb-4" id="section-2">
-        <h1 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
-            Skills</h1>
-        <WorkSkills SkillsData={Skills_state}/>
-    </section> 
+      <h1 className="mb-4 text-4xl font-extrabold text-center text-gray-900 dark:text-white">
+        Skills
+      </h1>
+      <WorkSkills SkillsData={Skills_state} />
+    </section>
     </>
     );
 }
