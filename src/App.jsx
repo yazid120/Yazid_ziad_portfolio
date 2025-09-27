@@ -43,7 +43,7 @@ function App() {
 
         <Skills />
 
-        <Contact />
+        {/* <Contact /> */}
 
         <Footer/>
       </Suspense>

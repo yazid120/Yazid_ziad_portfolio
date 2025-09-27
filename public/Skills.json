@@ -1,56 +1,112 @@
 {
-    "languages":{
-        "javascript":{
-          "title":"javascript", 
-          "image":"javascript-1.svg"
-        },
-        "PHP":{
-          "title":"php", 
-          "image":"php-1.svg"
-        },
-        "python":{
-          "title":"python", 
-          "image":"python-5.svg"
-        },
-        "ruby":{
-          "title":"ruby", 
-          "image":"ruby.svg"
-        }
+  "languages": {
+    "javascript": {
+      "title": "javascript",
+      "image": "javascript-1.svg"
     },
-    "Frameworks":{
-      "Laravel":{
-        "title":"Laravel", 
-        "image":"laravel-2.svg"
-      }, 
-      "React js":{
-        "title":"React", 
-        "image":"react-2.svg"
-      },
-      "Rails":{
-        "title":"rails", 
-        "image":"rails-1.svg"
-      }, 
-      "jquery":{
-        "title":"jquery",
-        "image":"jquery-3.svg"
-      }
+    "PHP": {
+      "title": "php",
+      "image": "php-1.svg"
     },
-    "Tools & styling":{
-        "HTML5":{
-          "title":"HTML",
-          "image":"html5-2.svg"
-        },
-        "CSS3":{
-          "title":"CSS",
-          "image":"css-4.svg"
-        },
-        "Tailwindcss":{
-          "title":"Tailwind CSS",
-          "image":"tailwind-css-2.svg"
-        }, 
-        "Bootstrap":{
-          "title":"Bootstrap",
-          "image":"bootstrap-4.svg"
-        }
+    "python": {
+      "title": "python",
+      "image": "python-5.svg"
+    },
+    "ruby": {
+      "title": "ruby",
+      "image": "ruby.svg"
+    },
+    "typescript": {
+      "title": "TypeScript",
+      "image": "typescript-logo.png"
+    },
+    "nodejs": {
+      "title": "Node.js",
+      "image": "node.png"
+    },
+    "sql": {
+      "title": "SQL",
+      "image": "sql.png"
     }
+  },
+  "Frameworks & Libraries": {
+    "Laravel": {
+      "title": "Laravel",
+      "image": "laravel-2.svg"
+    },
+    "React js": {
+      "title": "React",
+      "image": "react-2.svg"
+    },
+    "Rails": {
+      "title": "rails",
+      "image": "rails-1.svg"
+    },
+    "jquery": {
+      "title": "jquery",
+      "image": "jquery-3.svg"
+    },
+    "CodeIgniter": {
+      "title": "CodeIgniter",
+      "image": "codeigniter.png"
+    },
+    "Symfony": {
+      "title": "Symfony",
+      "image": "symfony.png"
+    }
+  },
+  "Tools & styling": {
+    "HTML5": {
+      "title": "HTML",
+      "image": "html5-2.svg"
+    },
+    "CSS3": {
+      "title": "CSS",
+      "image": "css-4.svg"
+    },
+    "Tailwindcss": {
+      "title": "Tailwind CSS",
+      "image": "tailwind-css-2.svg"
+    },
+    "Bootstrap": {
+      "title": "Bootstrap",
+      "image": "bootstrap-4.svg"
+    }
+  },
+  "Databases": {
+    "MySQL": {
+      "title": "MySQL",
+      "image": "MySQL.png"
+    },
+    "PostgreSQL": {
+      "title": "PostgreSQL",
+      "image": "postgresql.png"
+    },
+    "MongoDB": {
+      "title": "MongoDB",
+      "image": "mongodb.png"
+    }
+  },
+  "DevOps & Tools": {
+    "Git": {
+      "title": "Git",
+      "image": "git-icon.svg"
+    },
+    "GitHub": {
+      "title": "GitHub",
+      "image": "github-icon.png"
+    },
+    "GitLab": {
+      "title": "GitLab",
+      "image": "gitlab-icon.png"
+    },
+    "Jira": {
+      "title": "Jira",
+      "image": "jira.png"
+    },
+    "Docker": {
+      "title": "Docker",
+      "image": "docker.png"
+    }
+  }
 }

@@ -132,3 +132,19 @@ background-color: #042c44;
   color: #3b82f6; /* Tailwind's blue-500 */
   transform: scale(1.05);
 }
+
+.swiper-button-prev {
+  left: -40px; /* default is ~10px */
+}
+
+.swiper-button-next {
+  right: -40px; /* default is ~10px */
+}
+
+/* Optional: make arrows bigger and easier to see */
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important; /* or any color */
+  width: 25px !important;
+  height: 25px !important;
+}
