@@ -6,18 +6,19 @@ let Footer = function(){
         <>
         <footer className="bg-black p-6 shadow-md mt-8">
             <div className="container mx-auto text-center">
-                <h2 className="text-2xl font-semibold mb-4 text-white">Support Our Cause</h2>
+                <h2 className="text-2xl font-semibold mb-4 text-white">☕ Buy Me a Coffee</h2>
                 <p className="text-gray-400 mb-6">
-                    If you enjoy our content and would like to support us, consider making a donation to help keep our work going.
+                    Enjoyed my work? A coffee goes a long way in keeping me fueled and building cool stuff!
                 </p>
                 <div className="flex justify-center mb-6">
-                    <button className="bg-white text-black px-6 py-3 rounded-lg shadow hover:bg-gray-300 transition duration-300">
-                        Donate Now
-                    </button>
+                    <a href="https://buymeacoffee.com" target="_blank" rel="noopener noreferrer"
+                       className="inline-flex items-center gap-2 bg-yellow-400 text-gray-900 font-semibold px-6 py-3 rounded-lg shadow hover:bg-yellow-300 hover:scale-105 transition duration-300">
+                        ☕ Buy me a coffee
+                    </a>
                 </div>
                 <hr className="my-4 border-gray-600" />
                 <p className="text-sm text-gray-500">
-                    &copy; {new Date().getFullYear()} Your Company. All rights reserved.
+                    &copy; {new Date().getFullYear()} Yazid Ziad. All rights reserved.
                 </p>
             </div>
         </footer>

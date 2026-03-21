@@ -4,32 +4,37 @@ import config from "../../config";
 
 const WorkCertification = function({CertificationData}){
     return(
-        <>
-        <div className="container mx-auto p-4 max-h-screen overflow-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-auto gap-6">
-    {Object.keys(CertificationData).map((certif, key) => (
-      <div key={key} className="relative bg-white h-[400px] shadow-md rounded-lg p-6 hover:shadow-lg transition duration-300 ease-in-out overflow-hidden">
-      <div className="absolute inset-0 border-2 border-transparent hover:border-white transition duration-300 ease-in-out"></div>
-      <img 
-        src={`${config.baseUrl}/assets/images/${CertificationData[certif].image}`} 
-        alt={`${CertificationData[certif].certifiedBy} logo`} 
-        className="w-20 h-20 rounded-full object-contain mb-4 mx-auto"
-      />
-      <h3 className="text-lg font-semibold text-gray-800 text-center mb-2">
-        {CertificationData[certif].title}
-      </h3>
-      <p className="text-gray-500 text-center mb-4">
-        Certified by: <span className="text-gray-800">{CertificationData[certif].certifiedBy}</span>
-      </p>
-      <div className="text-sm text-gray-600">
-        <p><span className="font-semibold">Skills:</span> {CertificationData[certif].Skills.join(", ")}</p>
-        <p><span className="font-semibold">Topic:</span> {CertificationData[certif].topic}</p>
-      </div>
-  </div>
-    ))}
-    </div>
+        <div className="certification-grid">
+            {Object.keys(CertificationData).map((certif, key) => (
+                <div key={key} className="cert-card">
+                    <div className="cert-card-header">
+                        <img
+                            src={`${config.baseUrl}/assets/images/${CertificationData[certif].image}`}
+                            alt={`${CertificationData[certif].certifiedBy} logo`}
+                            className="cert-logo"
+                            onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = `${config.baseUrl}/assets/images/svg/placeholder.svg`; }}
+                        />
+                        <div>
+                            <p className="cert-title">{CertificationData[certif].title}</p>
+                            <p className="cert-issuer">
+                                <svg xmlns="http://www.w3.org/2000/svg" className="inline w-3.5 h-3.5 mr-1 -mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                {CertificationData[certif].certifiedBy}
+                            </p>
+                        </div>
+                    </div>
+
+                    <p className="cert-topic">{CertificationData[certif].topic}</p>
+
+                    <div className="cert-skills">
+                        {CertificationData[certif].Skills.map((skill, i) => (
+                            <span key={i} className="cert-skill-tag">{skill}</span>
+                        ))}
+                    </div>
+                </div>
+            ))}
         </div>
-        </>
     )
 }
 export default WorkCertification; 

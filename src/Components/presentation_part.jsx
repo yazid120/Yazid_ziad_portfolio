@@ -9,40 +9,47 @@ const PresentationSection = function () {
         { link_name: "Experience", section_id: "section-experience" },
         { link_name: "Certification", section_id: "section-certification" },
         { link_name: "Skills", section_id: "section-2" },
-        // { link_name: "Contact", section_id: "section-contact" },
     ];
 
     return (
-        <section className="mt-3 mx-auto max-w-6xl px-6 md:px-12 lg:px-32 text-center" id="section-home">
-            <div className="flex flex-col items-center p-8 md:p-12 lg:p-16">
-                <img src={Person} alt="kirua" className="rounded-full max-w-none w-44 shadow-lg shadow-white" />
-                <p className="text-white m-4 text-xl">
-                    <span className="text-emerald-100">Title:</span> Full Stack web developer
-                </p>
+        <section className="hero-section" id="section-home">
+            {/* Avatar with animated gradient ring */}
+            <div className="hero-avatar-wrapper">
+                <div className="hero-avatar-ring"></div>
+                <img src={Person} alt="Yazid Ziad" className="hero-avatar" />
             </div>
 
-            <div className="m-3 flex justify-center">
-                <ul className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-16 w-full sm:w-1/2 p-4">
-                    {Links_list.map(({ link_name, section_id }) => (
-                        <li
-                            key={section_id}
-                            className="text-white text-xl sm:text-3xl cursor-pointer"
-                        >
-                            <Link
-                                activeClass="active"
-                                to={section_id}
-                                spy={true}
-                                smooth={true}
-                                offset={-70}
-                                duration={800}
-                                className="font-semibold hover:text-blue-500 hover:scale-105 transition duration-300"
-                            >
-                                {link_name}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+            {/* Status badge */}
+            <div>
+                <span className="hero-status">
+                    <span className="hero-status-dot"></span>
+                    Available for work
+                </span>
             </div>
+
+            {/* Name & Title */}
+            <h1 className="hero-name">
+                Hi, I'm <span className="gradient-text">Yazid Ziad</span>
+            </h1>
+            <p className="hero-title">Full Stack Web Developer</p>
+
+            {/* Navigation links */}
+            <nav className="hero-nav">
+                {Links_list.map(({ link_name, section_id }) => (
+                    <Link
+                        key={section_id}
+                        activeClass="active"
+                        to={section_id}
+                        spy={true}
+                        smooth={true}
+                        offset={-70}
+                        duration={800}
+                        className="hero-nav-link"
+                    >
+                        {link_name}
+                    </Link>
+                ))}
+            </nav>
         </section>
     );
 };

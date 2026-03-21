@@ -25,12 +25,10 @@ const Experience = function () {
 
   return (
     <>
-      <h1 className="mb-4 mt-20 text-4xl tracking-tight font-extrabold text-center text-gray-900 
+      <h1 className="mb-8 mt-20 text-4xl tracking-tight font-extrabold text-center text-gray-900 
         dark:text-white"> Work Experiences </h1>
-      <section className="flex justify-center items-center" id="section-experience">
-        <div className="bg-gray-100  w-9/12 min-h-screen rounded-md	overflow-auto">
-          <WorkExperience workData={workData} />
-        </div>
+      <section className="experience-section" id="section-experience">
+        <WorkExperience workData={workData} />
       </section>
     </>
   )

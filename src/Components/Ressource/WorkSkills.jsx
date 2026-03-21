@@ -24,13 +24,15 @@ function WorkSkills({ SkillsData }) {
               modules={[Navigation]}
               spaceBetween={16}
               navigation
+              slidesOffsetBefore={40}
+              slidesOffsetAfter={40}
               breakpoints={{
                 320: { slidesPerView: 2 },
                 640: { slidesPerView: 3 },
                 768: { slidesPerView: 4 },
                 1024: { slidesPerView: 4 },
               }}
-              className="py-2"
+              className="py-2 skills-swiper"
             >
               {skillsEntries.map(([skillKey, skill]) => {
                 const imgSrc = `${config.baseUrl}/assets/images/svg/${skill.image || "placeholder.svg"}`;
