@@ -11,26 +11,29 @@ function WorkSkills({ SkillsData }) {
   }
 
   return (
-    <div className="main_sect_option px-4 space-y-8">
+    <div className="main_sect_option">
       {Object.entries(SkillsData).map(([sectionTitle, skillsObj]) => {
         // skillsObj is an object of skillKey => { title, image }
         const skillsEntries = Object.entries(skillsObj);
 
         return (
-          <div key={sectionTitle} className="mb-6">
-            <p className="text-white text-2xl font-bold mb-4">{sectionTitle}</p>
+          <div key={sectionTitle} className="skills-category">
+            <p className="skills-category-title">
+              <span className="cat-dot"></span>
+              {sectionTitle}
+            </p>
 
             <Swiper
               modules={[Navigation]}
-              spaceBetween={16}
+              spaceBetween={12}
               navigation
-              slidesOffsetBefore={40}
-              slidesOffsetAfter={40}
+              slidesOffsetBefore={36}
+              slidesOffsetAfter={36}
               breakpoints={{
                 320: { slidesPerView: 2 },
                 640: { slidesPerView: 3 },
                 768: { slidesPerView: 4 },
-                1024: { slidesPerView: 4 },
+                1024: { slidesPerView: 5 },
               }}
               className="py-2 skills-swiper"
             >
@@ -38,14 +41,14 @@ function WorkSkills({ SkillsData }) {
                 const imgSrc = `${config.baseUrl}/assets/images/svg/${skill.image || "placeholder.svg"}`;
                 return (
                   <SwiperSlide key={`${sectionTitle}-${skillKey}`} className="flex justify-center">
-                    <div className="item_skill text-center px-3">
+                    <div className="item_skill">
                       <img
                         src={imgSrc}
                         alt={skill.title}
-                        className="w-20 h-20 mx-auto mb-2 object-contain"
+                        className="w-14 h-14 mx-auto object-contain"
                         onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = `${config.baseUrl}/assets/images/svg/placeholder.svg`; }}
                       />
-                      <p className="text-white font-semibold text-sm">{skill.title}</p>
+                      <p>{skill.title}</p>
                     </div>
                   </SwiperSlide>
                 );

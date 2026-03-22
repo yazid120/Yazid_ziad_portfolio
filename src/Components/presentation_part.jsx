@@ -3,7 +3,7 @@ import Person from "../../public/assets/images/1745831090805.jpg"
 import { Link } from "react-scroll"
 
 
-const PresentationSection = function () {
+const PresentationSection = function ({ onOpenServices }) {
     const Links_list = [
         { link_name: "Home", section_id: "section-home" },
         { link_name: "Experience", section_id: "section-experience" },
@@ -50,6 +50,11 @@ const PresentationSection = function () {
                     </Link>
                 ))}
             </nav>
+
+            {/* CTA Button */}
+            <button className="hire-me-btn" onClick={onOpenServices}>
+                🚀 I Need a Website
+            </button>
         </section>
     );
 };

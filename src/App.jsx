@@ -4,6 +4,7 @@ import Footer from './partials/footer';
 import Dark_Light_mode from './Components/Light_dark_mode';
 import LoadingSpinner from './Components/LoadingSpinner';
 import Certification from './Components/Certification';
+import Services from './Components/Services';
 
 // Lazily import components
 const PresentationSection = React.lazy(() => import('./Components/presentation_part'));
@@ -15,6 +16,7 @@ const Contact = React.lazy(() => import('./Components/Contact'));
 
 function App() {
   const [loading, setLoading] = useState(true);
+  const [showServices, setShowServices] = useState(false);
 
   useEffect(() => {
     // Set a delay of 1 second
@@ -31,9 +33,9 @@ function App() {
   return (
   <>
   {/*** NavBar component ***/}
-    <Navigationbar />
+    <Navigationbar onOpenServices={() => setShowServices(true)} />
       <Suspense fallback={<LoadingSpinner />}>
-        <PresentationSection />
+        <PresentationSection onOpenServices={() => setShowServices(true)} />
  
         <Stars />
 
@@ -48,8 +50,8 @@ function App() {
         <Footer/>
       </Suspense>
 
-  {/*** Footer component ***/}
-  {/* <Footer /> */}
+  {/*** Services Modal ***/}
+  <Services isOpen={showServices} onClose={() => setShowServices(false)} />
   </>
   )
 }
