@@ -23,7 +23,7 @@ const PresentationSection = function ({ onOpenServices }) {
             <div>
                 <span className="hero-status">
                     <span className="hero-status-dot"></span>
-                    Available for work
+                    Available for freelance missions
                 </span>
             </div>
 
