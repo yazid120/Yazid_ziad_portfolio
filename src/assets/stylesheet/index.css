@@ -233,87 +233,118 @@ button:focus-visible {
 .Skills_wrapp_container {
   box-sizing: border-box;
   width: 100%;
-  padding: 0 8%;
-  margin-top: 3rem;
+  max-width: 1440px;
+  padding: 3rem 8%;
+  margin: 0 auto;
+}
+
+.skills-section-heading {
+  text-align: center;
   margin-bottom: 3rem;
 }
 
-.Skills_wrapp_container h1 {
-  text-align: center;
+.skills-eyebrow {
+  display: inline-block;
+  color: #93c5fd;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  margin-bottom: 0.75rem;
+}
+
+.skills-section-heading h2 {
   color: #fff;
-  margin-bottom: 2rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0;
 }
 
-.main_sect_option {
+.skills-section-heading p {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 38rem;
+  margin: 0.9rem auto 0;
+}
+
+.skills-marquee {
+  overflow: hidden;
+  padding: 0.75rem 0;
+  mask-image: linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+}
+
+.skills-track {
   display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
+  width: max-content;
+  animation: skills-marquee 42s linear infinite;
 }
 
-.skills-category {
-  background: linear-gradient(135deg, #1e293b 0%, #1a2332 100%);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 14px;
-  padding: 1.5rem 1.25rem;
+.skills-marquee:hover .skills-track {
+  animation-play-state: paused;
 }
 
-.skills-category-title {
-  display: inline-flex;
+.skills-group {
+  display: flex;
+  flex: none;
   align-items: center;
-  gap: 8px;
-  color: #e2e8f0;
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  width: 100%;
+  gap: 0.9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0 0.9rem 0 0;
 }
 
-.skills-category-title .cat-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-  flex-shrink: 0;
-}
-
-.item_skill {
+.skill-chip {
   box-sizing: border-box;
-  padding: 1.25rem 0.75rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 10rem;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  flex: none;
+  padding: 0.8rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--skill-color) 45%, transparent);
+  border-radius: 999px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--skill-color) 17%, #111827),
+    color-mix(in srgb, var(--skill-color) 8%, #0f172a)
+  );
+  color: var(--skill-color);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px color-mix(in srgb, var(--skill-color) 10%, transparent);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
-.item_skill:hover {
-  background: rgba(59, 130, 246, 0.08);
-  border-color: rgba(99, 102, 241, 0.35);
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+.skill-chip:hover {
+  background: color-mix(in srgb, var(--skill-color) 24%, #111827);
+  box-shadow: 0 0 1.4rem color-mix(in srgb, var(--skill-color) 24%, transparent);
+  transform: scale(1.04);
 }
 
-.item_skill img {
-  transition: transform 0.3s ease;
+@keyframes skills-marquee {
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.item_skill:hover img {
-  transform: scale(1.1);
-}
+@media (prefers-reduced-motion: reduce) {
+  .skills-marquee {
+    overflow: visible;
+    mask-image: none;
+  }
 
-.item_skill p {
-  font-weight: 600;
-  color: #cbd5e1;
-  font-size: 0.82rem;
-  margin-top: 0.5rem;
+  .skills-track {
+    width: 100%;
+    animation: none;
+  }
+
+  .skills-group {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .skills-group[aria-hidden="true"] {
+    display: none;
+  }
 }
 
 #contact_btn{
@@ -841,38 +872,17 @@ background-color: #042c44;
   transform: scale(1.05);
 }
 
-/* Swiper navigation arrows for Skills */
-.skills-swiper .swiper-button-prev,
-.skills-swiper .swiper-button-next {
-  color: #93c5fd !important;
-  width: 30px !important;
-  height: 30px !important;
-  top: 50% !important;
-  transform: translateY(-50%);
-  margin-top: 0 !important;
-  background: rgba(15, 23, 42, 0.7);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  z-index: 10;
-  transition: all 0.2s ease;
-}
+@media (max-width: 760px) {
+  .Skills_wrapp_container {
+    padding: 2.5rem 5%;
+  }
 
-.skills-swiper .swiper-button-prev:hover,
-.skills-swiper .swiper-button-next:hover {
-  background: rgba(59, 130, 246, 0.2);
-  border-color: rgba(99, 102, 241, 0.4);
-}
+  .skills-group {
+    gap: 0.65rem;
+  }
 
-.skills-swiper .swiper-button-prev::after,
-.skills-swiper .swiper-button-next::after {
-  font-size: 14px !important;
-  font-weight: bold;
-}
-
-.skills-swiper .swiper-button-prev {
-  left: 4px !important;
-}
-
-.skills-swiper .swiper-button-next {
-  right: 4px !important;
+  .skill-chip {
+    padding: 0.7rem 1rem;
+    font-size: 0.95rem;
+  }
 }
