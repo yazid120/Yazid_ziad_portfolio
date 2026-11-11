@@ -319,6 +319,165 @@ button:focus-visible {
   transform: scale(1.04);
 }
 
+.contact-section {
+  box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 8% 5rem;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 5vw, 5rem);
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 24px;
+  background:
+    radial-gradient(ellipse at top left, rgba(59, 130, 246, 0.12), transparent 55%),
+    linear-gradient(145deg, #1e293b 0%, #111827 100%);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.contact-intro h2 {
+  margin: 0.25rem 0 1rem;
+  color: #f8fafc;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.08;
+}
+
+.contact-intro > p {
+  max-width: 27rem;
+  margin: 0;
+  color: #aab8ca;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.contact-email {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #93c5fd;
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.contact-email:hover {
+  color: #bfdbfe;
+}
+
+.contact-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.contact-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-field-full {
+  grid-column: 1 / -1;
+}
+
+.contact-field label {
+  color: #e2e8f0;
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.contact-field input,
+.contact-field textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 10px;
+  outline: none;
+  background: rgba(15, 23, 42, 0.65);
+  color: #f8fafc;
+  font: inherit;
+  font-size: 0.92rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-field textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #718096;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.16);
+}
+
+.contact-honeypot {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.contact-form-footer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
+}
+
+.contact-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  min-height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.contact-submit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.32);
+}
+
+.contact-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.contact-feedback {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 0.88rem;
+}
+
+.contact-feedback[data-type="success"] {
+  color: #86efac;
+}
+
+.contact-feedback[data-type="error"] {
+  color: #fca5a5;
+}
+
 @keyframes skills-marquee {
   to {
     transform: translateX(-50%);
@@ -877,6 +1036,15 @@ background-color: #042c44;
     padding: 2.5rem 5%;
   }
 
+  .contact-section {
+    padding: 3rem 5%;
+  }
+
+  .contact-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
   .skills-group {
     gap: 0.65rem;
   }
@@ -884,5 +1052,16 @@ background-color: #042c44;
   .skill-chip {
     padding: 0.7rem 1rem;
     font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .contact-form-footer {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }

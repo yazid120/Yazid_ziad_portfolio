@@ -1,81 +1,152 @@
-import React from "react";
-import { useState } from "react"; 
-import axios from "axios";
-import experieceSvg from "../../public/assets/images/Innovation-amico.svg"
+import { useState } from "react";
 
+const initialForm = {
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
+  website: "",
+};
 
-const Contact = function(){
-    const [email,setEmail] = useState('')
-    const [subject,setSubject] = useState('')
-    const [message,setMessage] = useState('')
+function Contact() {
+  const [form, setForm] = useState(initialForm);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [feedback, setFeedback] = useState(null);
 
+  function updateField(event) {
+    const { name, value } = event.target;
+    setForm((currentForm) => ({ ...currentForm, [name]: value }));
+  }
 
-    const SubmitContact = async function(e){
-        e.preventDefault();
-       let contactData = {
-        email:email,
-        subject:subject, 
-        message:message
-       }
+  async function handleSubmit(event) {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setFeedback(null);
 
-       try{
-        const response = await axios.post('http://127.0.0.1:5000/api/contact', contactData, {
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-            console.log(response.data)
-       }catch(e){
-            console.error('excepted error: ', e)
-       }
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!response.headers.get("content-type")?.includes("application/json")) {
+        throw new Error(
+          "The contact API is unavailable. Restart npm run dev locally, or redeploy the API on Vercel."
+        );
+      }
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Your message could not be sent. Please try again.");
+      }
+      if (result.message !== "Message sent.") {
+        throw new Error("The contact API returned an unexpected response. Please try again later.");
+      }
+
+      setForm(initialForm);
+      setFeedback({ type: "success", message: "Thanks for reaching out. Your message has been sent." });
+    } catch (error) {
+      setFeedback({
+        type: "error",
+        message: error.message || "Your message could not be sent. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
+  }
 
-    return(
-        <>
-    <div className="flex justify-center gap-4 ">
-        <img src={experieceSvg} className="w-3/4 sm:w-1/3 lg:w-1/4 object-cover rounded-md shadow-lg" alt="Experience" />
-    </div>
-    <section className="bg-white dark:bg-gray-900" id="section-contact">
-      <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Me</h2>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Contact me in any convenient way to discuss the details.</p>
-        <form action="" className="space-y-8">
-          <div>
-              <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Your email</label>
-              <input type="email" id="email" className="shadow-sm bg-gray-50 border 
-              border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 
-              focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 
-              dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 
-              dark:shadow-sm-light" placeholder="name@gmail.com" required
-              value={email} onChange={(e)=> setEmail(e.target.value)}/>
+  return (
+    <section className="contact-section" id="section-contact">
+      <div className="contact-card">
+        <div className="contact-intro">
+          <span className="skills-eyebrow">LET&apos;S CONNECT</span>
+          <h2>Have a project in mind?</h2>
+          <p>
+            Whether you&apos;re looking for a collaborator or have a project to
+            discuss, send me a message and I&apos;ll get back to you.
+          </p>
+        </div>
+
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <div className="contact-fields">
+            <div className="contact-field">
+              <label htmlFor="contact-name">Your name</label>
+              <input
+                autoComplete="name"
+                id="contact-name"
+                maxLength={100}
+                name="name"
+                onChange={updateField}
+                placeholder="Jane Smith"
+                required
+                value={form.name}
+              />
+            </div>
+            <div className="contact-field">
+              <label htmlFor="contact-email">Email address</label>
+              <input
+                autoComplete="email"
+                id="contact-email"
+                maxLength={254}
+                name="email"
+                onChange={updateField}
+                placeholder="jane@example.com"
+                required
+                type="email"
+                value={form.email}
+              />
+            </div>
+            <div className="contact-field contact-field-full">
+              <label htmlFor="contact-subject">What would you like to discuss?</label>
+              <input
+                id="contact-subject"
+                maxLength={150}
+                name="subject"
+                onChange={updateField}
+                placeholder="Project, collaboration, or just saying hello"
+                required
+                value={form.subject}
+              />
+            </div>
+            <div className="contact-field contact-field-full">
+              <label htmlFor="contact-message">Your message</label>
+              <textarea
+                id="contact-message"
+                maxLength={5000}
+                name="message"
+                onChange={updateField}
+                placeholder="Tell me a little about what you have in mind..."
+                required
+                rows={5}
+                value={form.message}
+              />
+            </div>
+            {/* <div className="contact-honeypot" aria-hidden="true">
+              <label htmlFor="contact-website">Leave this field empty</label>
+              <input
+                autoComplete="off"
+                id="contact-website"
+                name="website"
+                onChange={updateField}
+                tabIndex={-1}
+                value={form.website}
+              />
+            </div> */}
           </div>
-          <div>
-              <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Subject</label>
-              <input type="text" id="subject" className="block p-3 w-full text-sm text-gray-900 bg-gray-50 
-              rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 
-              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
-               dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" 
-               placeholder="Let us know how we can help you" required
-               value={subject} onChange={(e)=> setSubject(e.target.value)}/>
+
+          <div className="contact-form-footer">
+            <button className="contact-submit" disabled={isSubmitting} type="submit">
+              {isSubmitting ? "Sending..." : "Send message"}
+              {!isSubmitting && <span aria-hidden="true">&rarr;</span>}
+            </button>
+            <p className="contact-feedback" aria-live="polite" data-type={feedback?.type || ""}>
+              {feedback?.message || ""}
+            </p>
           </div>
-          <div className="sm:col-span-2">
-              <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Your message</label>
-              <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 
-              rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 
-              dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white 
-              dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."
-              value={message} onChange={(e)=> setMessage(e.target.value)}>
-              </textarea>
-          </div>
-          <button type="submit" id="contact_btn" className="py-3 px-5 text-sm font-medium text-center text-white
-           rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none 
-           focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
-           onClick={(e)=> SubmitContact(e)}>
-            Send message</button>
         </form>
       </div>
-   </section>
-        </>
-    )
+    </section>
+  );
 }
-export default Contact; 
+
+export default Contact;
