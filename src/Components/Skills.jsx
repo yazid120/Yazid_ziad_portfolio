@@ -1,20 +1,17 @@
-import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import WorkSkills from "./Ressource/WorkSkills";
-import config from "../config";
 
 const Skills = function () {
   const [Skills_state, SetSkills] = useState([]);
 
   async function getSkills_Api() {
-    const link_api = `${config.baseUrl}/Skills.json`;
+    const link_api = `${import.meta.env.BASE_URL}Skills.json`;
     try {
-      await axios.get(link_api).then((response) => {
-        SetSkills(response.data);
-      })
+      const response = await axios.get(link_api);
+      SetSkills(response.data);
     } catch (error) {
-      console.error('Fetching error in:'.error)
+      console.error("Fetching skills failed:", error);
     }
   }
   useEffect(() => {
@@ -24,9 +21,11 @@ const Skills = function () {
   return (
     <>
       <section className="Skills_wrapp_container" id="section-2">
-        <h1 className="text-4xl font-extrabold text-center dark:text-white">
-          Skills
-        </h1>
+        <div className="skills-section-heading">
+          <span className="skills-eyebrow">MY TOOLKIT</span>
+          <h2>Skills & Technologies</h2>
+          <p>Tools and technologies I use to build, automate, and deliver digital products.</p>
+        </div>
         <WorkSkills SkillsData={Skills_state} />
       </section>
     </>

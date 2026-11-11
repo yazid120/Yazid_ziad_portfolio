@@ -2,111 +2,145 @@
   "languages": {
     "javascript": {
       "title": "javascript",
-      "image": "javascript-1.svg"
+      "color": "#F7DF1E"
     },
     "PHP": {
       "title": "php",
-      "image": "php-1.svg"
+      "color": "#777BB4"
     },
     "python": {
       "title": "python",
-      "image": "python-5.svg"
+      "color": "#3776AB"
     },
     "ruby": {
       "title": "ruby",
-      "image": "ruby.svg"
+      "color": "#CC342D"
     },
     "typescript": {
       "title": "TypeScript",
-      "image": "typescript-logo.png"
+      "color": "#3178C6"
     },
     "nodejs": {
       "title": "Node.js",
-      "image": "node.png"
+      "color": "#5FA04E"
     },
     "sql": {
       "title": "SQL",
-      "image": "sql.png"
+      "color": "#4479A1"
     }
   },
   "Frameworks & Libraries": {
     "Laravel": {
       "title": "Laravel",
-      "image": "laravel-2.svg"
+      "color": "#FF2D20"
     },
     "React js": {
       "title": "React",
-      "image": "react-2.svg"
+      "color": "#61DAFB"
     },
     "Rails": {
       "title": "rails",
-      "image": "rails-1.svg"
+      "color": "#CC0000"
     },
     "jquery": {
       "title": "jquery",
-      "image": "jquery-3.svg"
+      "color": "#0769AD"
     },
     "CodeIgniter": {
       "title": "CodeIgniter",
-      "image": "codeigniter.png"
+      "color": "#EF4223"
     },
     "Symfony": {
       "title": "Symfony",
-      "image": "symfony.png"
+      "color": "#A5A5A5"
     }
   },
   "Tools & styling": {
     "HTML5": {
       "title": "HTML",
-      "image": "html5-2.svg"
+      "color": "#E34F26"
     },
     "CSS3": {
       "title": "CSS",
-      "image": "css-4.svg"
+      "color": "#1572B6"
     },
     "Tailwindcss": {
       "title": "Tailwind CSS",
-      "image": "tailwind-css-2.svg"
+      "color": "#06B6D4"
     },
     "Bootstrap": {
       "title": "Bootstrap",
-      "image": "bootstrap-4.svg"
+      "color": "#7952B3"
     }
   },
   "Databases": {
     "MySQL": {
       "title": "MySQL",
-      "image": "MySQL.png"
+      "color": "#4479A1"
     },
     "PostgreSQL": {
       "title": "PostgreSQL",
-      "image": "postgresql.png"
+      "color": "#4169E1"
     },
     "MongoDB": {
       "title": "MongoDB",
-      "image": "mongodb.png"
+      "color": "#47A248"
     }
   },
   "DevOps & Tools": {
     "Git": {
       "title": "Git",
-      "image": "git-icon.svg"
+      "color": "#F05032"
     },
     "GitHub": {
       "title": "GitHub",
-      "image": "github-icon.png"
+      "color": "#C9D1D9"
     },
     "GitLab": {
       "title": "GitLab",
-      "image": "gitlab-icon.png"
+      "color": "#FC6D26"
     },
     "Jira": {
       "title": "Jira",
-      "image": "jira.png"
+      "color": "#2684FF"
     },
     "Docker": {
       "title": "Docker",
-      "image": "docker.png"
+      "color": "#2496ED"
+    },
+    "Postman": {
+      "title": "Postman",
+      "color": "#FF6C37"
+    }
+  },
+  "AI & Automation": {
+    "n8n": {
+      "title": "n8n",
+      "color": "#FF6D5A"
+    },
+    "OpenAI": {
+      "title": "OpenAI",
+      "color": "#74AA9C"
+    },
+    "GPT": {
+      "title": "GPT",
+      "color": "#10A37F"
+    },
+    "OpenAI API": {
+      "title": "OpenAI API",
+      "color": "#74AA9C"
+    },
+    "AI Agents": {
+      "title": "AI Agents",
+      "color": "#A78BFA"
+    },
+    "REST APIs": {
+      "title": "REST APIs",
+      "color": "#34D399"
+    },
+    "Prompt Engineering": {
+      "title": "Prompt Engineering",
+      "color": "#C084FC"
     }
   }
 }
