@@ -1,4 +1,6 @@
 import React from "react";
+import {FaGithubAlt, FaDiscord} from 'react-icons/fa'
+import {RiLinkedinFill} from 'react-icons/ri'
 
 
 let Footer = function(){
@@ -17,6 +19,20 @@ let Footer = function(){
                     </a>
                 </div>
                 <hr className="my-4 border-gray-600" />
+                <div className="flex justify-center gap-6 mb-6">
+                    <a href="https://github.com/yazid120" target="_blank" rel="noopener noreferrer"
+                       className="text-gray-400 hover:text-white transition duration-300">
+                        <FaGithubAlt className="text-2xl" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/ziad-mouhamed-yazid-802057218/" target="_blank" rel="noopener noreferrer"
+                       className="text-gray-400 hover:text-blue-400 transition duration-300">
+                        <RiLinkedinFill className="text-2xl" />
+                    </a>
+                    <a href="https://discord.com/users/410409153958248449" target="_blank" rel="noopener noreferrer"
+                       className="text-gray-400 hover:text-blue-500 transition duration-300">
+                        <FaDiscord className="text-2xl" />
+                    </a>
+                </div>
                 <div className="flex justify-center mb-3">
                     <a href="https://github.com/yazid120/Yazid_ziad_portfolio" target="_blank" rel="noopener noreferrer"
                        className="gh-star-btn gh-star-btn--sm">

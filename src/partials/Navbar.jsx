@@ -17,7 +17,7 @@ import {FcFlashOn} from 'react-icons/fc'
    
 let Navigationbar = function({ onOpenServices }){
     return (
-      <Navbar className="bg-dark mx-auto max-w-screen-xl px-4 py-3 mt-3 border-0">
+      <Navbar className="bg-dark mx-auto max-w-screen-xl px-4 py-3 border-0">
         <div className="flex flex-wrap items-center justify-between gap-y-4 text-blue-gray-900">
           <Typography
             as="a"
